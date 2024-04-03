@@ -1,0 +1,45 @@
+
+
+$height: 40px;
+
+@mixin rounded(){
+  height: $height;
+  border: none;
+  box-sizing: border-box;
+  border-radius: calc($height/2);
+  padding: 0 2rem;
+}
+
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid #f9f9f9;
+    padding: 10px 0;
+    input{
+      flex-grow: 1;
+      max-width: 50%;
+      border: 1px solid #f0f0f0;
+      @include rounded();
+    }
+    input:focus{
+      outline: none;
+    }
+    button{
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+      background-color: navy;
+      @include rounded();
+      transition: 1s;
+    }
+    button:hover{
+      background-color: black;
+      color:#f2f2f2;
+    }
+    button:disabled{
+      background-color: #777;
+    }
+  }

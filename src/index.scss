@@ -1,0 +1,54 @@
+
+.container{
+  background-color: #F1F1F1;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 10fr 1fr;
+
+  .navbar{
+    background-color: #fff;
+    h1{
+    text-align: center;
+    color: #444;
+    }
+    span{
+      color: navy;
+    }
+  }
+
+  .images-list {
+    background-color: #F5f5f5;
+    // border: 2px solid red;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    overflow-y: scroll;
+    .image-wrapper{
+      height: 320px;
+      cursor: pointer;
+      transition: 0.6s;
+    }
+    
+    .image-wrapper:hover{
+      scale:1.02;
+    }
+  }
+
+  .pagination-box{
+    display: flex;
+    justify-self: center;
+    padding-right: 2rem;
+    align-items: center;
+    gap: 10px;
+    button{
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    button:disabled{
+      color: #777;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+
+
+.image-laoding-skeleton{
+    background-color: #e3e6eb;
+    overflow: hidden;
+    border-radius: 10px;
+    width:300px;
+    height:300px;
+}
+
+.image-laoding-skeleton::before{
+    width: 0.1px;
+    height: 200% ; 
+    position: relative;
+    right:10px;
+    background-color: transparent;
+    box-shadow: 5px 5px 30px #9ca1aa;
+    content: "";
+    display: inline-block;
+    animation: rotate 2s ease-in infinite alternate-reverse;
+}
+
+ img{
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 300px;
+    height:300px;
+ }
+
+ @keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+ }
